@@ -15,7 +15,8 @@ const DISCORD_USERS_AOC_USERS = {
   "1321927": "<@813790398015209492>",
   "1573950": "<@543384567797776384>",
   "1994636": "<@834479429748654101>",
-  "963501": "<@975920435432661052>"
+  "963501": "<@975920435432661052>",
+  "3310137": "<@763253793990115338>"
 };
 
 (async () => {
@@ -47,7 +48,7 @@ const DISCORD_USERS_AOC_USERS = {
           color: 0xFFEB3B,
           url: 'https://adventofcode.com/2023/leaderboard/private/view/970245',
           footer: {
-            text: "Want to link your Discord Account? Ping @dainfloop! | View the full leaderboard by clicking the title"
+            text: "Want to link your Discord Account? Ping @dainfloop (Don't spam though!) | View the full leaderboard by clicking the title"
           }
         }
       ],
