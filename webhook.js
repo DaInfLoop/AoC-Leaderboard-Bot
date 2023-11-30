@@ -19,14 +19,12 @@ const DISCORD_USERS_AOC_USERS = {
 };
 
 (async () => {
-  let leaderboard = await fetch('https://adventofcode.com/2023/leaderboard/private/view/2246559.json?order=stars', {
+  let leaderboard = await fetch('https://adventofcode.com/2023/leaderboard/private/view/970245.json?order=stars', {
     headers: {
       'Cookie': process.env.COOKIE,
       'Accept': 'application/json'
     }
-  }).then(response => response.text());
-
-  console.log(leaderboard)
+  }).then(response => response.json());
 
   leaderboard = JSON.parse(leaderboard);
 
@@ -46,13 +44,8 @@ const DISCORD_USERS_AOC_USERS = {
         {
           title: "Advent of Code Leaderboard",
           description: leaderboard.join('\n'),
-          color: 0xFFFF01,
-          url: 'https://adventofcode.com/2023/leaderboard/private/view/2246559',
-          author: {
-            name: "Replit Clubs",
-            url: "https://discord.com/channels/437048931827056642/1038126782852894771",
-            icon_url: "https://cdn.discordapp.com/avatars/1038151028002017311/7590e0ea4781ee0543a376dd4208f0bf.png"
-          },
+          color: 0xFFEB3B,
+          url: 'https://adventofcode.com/2023/leaderboard/private/view/970245',
           footer: {
             text: "Want to link your Discord Account? Ping @dainfloop! | View the full leaderboard by clicking the title"
           }
