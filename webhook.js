@@ -1,8 +1,9 @@
 const { fetch } = require('undici');
 const DISCORD_USERS_AOC_USERS = require('./users');
+const config = require('./config.json')
 
 (async () => {
-  let leaderboard = await fetch('https://adventofcode.com/2023/leaderboard/private/view/970245.json?order=stars', {
+  let leaderboard = await fetch(`https://adventofcode.com/2023/leaderboard/private/view/${config.leaderboard}.json?order=stars`, {
     headers: {
       'Cookie': process.env.COOKIE,
       'Accept': 'application/json'
@@ -26,10 +27,7 @@ const DISCORD_USERS_AOC_USERS = require('./users');
           title: "Advent of Code Leaderboard",
           description: leaderboard.join('\n'),
           color: 0xFFEB3B,
-          url: 'https://adventofcode.com/2023/leaderboard/private/view/970245',
-          footer: {
-            text: "Want to link your Discord Account? Ping @dainfloop (Don't spam though!) | View the full leaderboard by clicking the title"
-          }
+          url: `https://adventofcode.com/2023/leaderboard/private/view/${config.leaderboard}`,
         }
       ],
     })
