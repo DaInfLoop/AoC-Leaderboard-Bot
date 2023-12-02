@@ -11,7 +11,7 @@ const DISCORD_USERS_AOC_USERS = require('./users');
 
   leaderboard = leaderboard.members
 
-  leaderboard = Object.values(leaderboard).sort((a, b) => b.local_score - a.local_score).map((m, i) => `${['🥇','🥈','🥉'][i] || `${i+1})`} ${m.name || `(anonymous user #${m.id})`}${DISCORD_USERS_AOC_USERS[m.id]?` (${DISCORD_USERS_AOC_USERS[m.id]})`:''} - ${m.local_score} (⭐ ${m.stars})`);
+  leaderboard = Object.values(leaderboard).sort((a, b) => b.local_score - a.local_score).map((m, i) => `${['🥇','🥈','🥉'][i] || `${i+1})`} ${m.name || `(anonymous user #${m.id})`}${DISCORD_USERS_AOC_USERS[m.id]?` (<@${DISCORD_USERS_AOC_USERS[m.id]}>)`:''} - ${m.local_score} (⭐ ${m.stars})`);
 
   leaderboard.length = Math.min(leaderboard.length, 10);
 
