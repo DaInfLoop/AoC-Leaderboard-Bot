@@ -3,7 +3,7 @@
 Cool script that posts a Advent of Code private leaderboard on Discord
 
 > [!NOTE]  
-> This version of the webhook runs in the [Friends of Replit](https://discord.gg/friendsofreplit) Discord server, running every day at 5:00AM UTC.
+> This version of the webhook runs in the [Friends of Replit](https://discord.gg/friendsofreplit) Discord server, running every day at about 5:30AM UTC.
 
 ## Setup
 
