@@ -1,6 +1,6 @@
 const { fetch } = require('undici');
 const DISCORD_USERS_AOC_USERS = require('./users');
-const config = require('./config.json')
+const config = require('./config.json');
 
 (async () => {
   let leaderboard = await fetch(`https://adventofcode.com/2023/leaderboard/private/view/${config.leaderboard}.json?order=stars`, {
